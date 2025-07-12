@@ -1,0 +1,107 @@
+// 将键绑定放在此文件中以覆盖默认值
+[
+    // 快速搜素
+    // {
+    //     "key": "ctrl+f",
+    //     "command": "workbench.action.quickTextSearch",
+    //     "when": "!inQuickOpen"
+    // },
+
+    // 文件切换
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.quickOpen",
+        "when": "!inQuickOpen"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "workbench.action.closeQuickOpen",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpenSelectPrevious",
+        "when": "inQuickOpen"
+    },
+
+
+    // 自动填补选项切换
+    {
+        "key": "ctrl+n",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetVisible && textInputFocus"
+    },
+
+    // navigate among tabs
+    {
+      "key": "ctrl+9",
+      "command": "workbench.action.previousEditorInGroup"
+    },
+    {
+      "key": "ctrl+0",
+      "command": "workbench.action.nextEditorInGroup"
+    },
+
+    // create group
+    {
+        "key": "cmd+j",
+        "command": "workbench.action.newGroupBelow",
+    },
+    {
+        "key": "cmd+k",
+        "command": "workbench.action.newGroupAbove",
+    },
+    {
+        "key": "cmd+h",
+        "command": "workbench.action.newGroupLeft",
+    },
+    {
+        "key": "cmd+l",
+        "command": "workbench.action.newGroupRight",
+    },
+
+    // navigate among groups
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.navigateDown"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.navigateUp"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.navigateLeft"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.navigateRight"
+    },
+
+    // create terminal
+    {
+        "key": "cmd+t",
+        "command": "workbench.action.createTerminalEditor",
+    },
+    // terminal scroll
+    {
+        "key": "alt+j",
+        "command": "workbench.action.terminal.scrollDown",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+k",
+        "command": "workbench.action.terminal.scrollUp",
+        "when": "terminalFocus"
+    }
+]

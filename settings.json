@@ -1,0 +1,94 @@
+{
+    "workbench.editor.splitInGroupLayout": "vertical",
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.smoothScrolling": true,
+
+    "vim.hlsearch": true,
+    "vim.incsearch": true,
+
+    "vim.easymotion": true,
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "leader",
+                "u"
+            ],
+            "commands": [
+                {
+                    "command": "workbench.view.explorer",
+                }
+            ]
+        },
+        // 修改easymotion 快速导航快捷键
+        {
+            "before": ["U"],
+            "after": ["J"]
+        },
+        {
+            "before": ["J"],
+            "after": ["<leader>", "<leader>", "w"]
+        },
+        {
+            "before": ["H"],
+            "after": ["<leader>", "<leader>", "b"]
+        },
+        {
+            "before": ["K"],
+            "after": ["<leader>", "<leader>", "g", "e"]
+        },
+        {
+            "before": ["L"],
+            "after": ["<leader>", "<leader>", "e"]
+        },
+    ],
+  
+    "vim.visualModeKeyBindingsNonRecursive": [
+        // select and search
+        {
+            "before": ["*"],
+            "commands": [
+                {
+                    "command": "editor.action.clipboardCopyAction" // 复制选中文本到剪贴板
+                },
+                {
+                    "command": "vim.remap",
+                    "args": {
+                        "after": ["<Esc>", "/", "<C-r>", "+", "<CR>"] // 退出 Visual 模式并执行搜索
+                    }
+                }
+            ]
+        },
+        {
+            "before": ["J"],
+            "after": ["<leader>", "<leader>", "w"]
+        },
+        {
+            "before": ["H"],
+            "after": ["<leader>", "<leader>", "b"]
+        },
+        {
+            "before": ["K"],
+            "after": ["<leader>", "<leader>", "g", "e"]
+        },
+        {
+            "before": ["L"],
+            "after": ["<leader>", "<leader>", "e"]
+        }
+    ],
+
+    "vim.insertModeKeyBindings": [
+        // delete until a blank
+        {
+            "before": ["<C-y>"],
+            "commands": [
+                {
+                    "command": "vim.remap",
+                    "args": {
+                        "after": ["<Esc>", "d", "T", " ", "i"]
+                    }
+                }
+            ]
+        }
+    ]
+}
